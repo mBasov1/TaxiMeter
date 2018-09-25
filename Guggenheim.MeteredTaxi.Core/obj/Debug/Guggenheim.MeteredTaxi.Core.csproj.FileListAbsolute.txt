@@ -1,0 +1,6 @@
+C:\Users\Michael\source\repos\GuggenheimAssgnment\Guggenheim.MeteredTaxi.Core\bin\Debug\Guggenheim.MeteredTaxi.Core.dll
+C:\Users\Michael\source\repos\GuggenheimAssgnment\Guggenheim.MeteredTaxi.Core\bin\Debug\Guggenheim.MeteredTaxi.Core.pdb
+C:\Users\Michael\source\repos\GuggenheimAssgnment\Guggenheim.MeteredTaxi.Core\obj\Debug\Guggenheim.MeteredTaxi.Core.csprojAssemblyReference.cache
+C:\Users\Michael\source\repos\GuggenheimAssgnment\Guggenheim.MeteredTaxi.Core\obj\Debug\Guggenheim.MeteredTaxi.Core.csproj.CoreCompileInputs.cache
+C:\Users\Michael\source\repos\GuggenheimAssgnment\Guggenheim.MeteredTaxi.Core\obj\Debug\Guggenheim.MeteredTaxi.Core.dll
+C:\Users\Michael\source\repos\GuggenheimAssgnment\Guggenheim.MeteredTaxi.Core\obj\Debug\Guggenheim.MeteredTaxi.Core.pdb

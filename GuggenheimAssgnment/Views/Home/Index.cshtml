@@ -1,0 +1,56 @@
+﻿<!doctype html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+</head>
+<body>
+    <div class="jumbotron">
+        <h1 id="Title">Taxi Meter</h1>
+        <p>A simple utility for calculating taxi fare</p>
+    </div>
+    <div ng-app="taxiApp" ng-controller="formController">
+
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <form ng-submit="processForm()">
+                            <label>Minutes standing still or travelling faster than 6 MPH:</label>
+                            <input type="number" ng-model="formData.minutesTravelled" placeholder="Enter an integer here" ng-min="0" min="0" class="form-control">
+                            <label>Miles travelling slower than 6 MPH :</label>
+                            <br />
+                            <sub>(to the nearest 1/5th mile)</sub>
+                            <input type="number" ng-model="formData.milesTravlled" placeholder="Enter a decimal value here" ng-min="0" min="0" step="0.2" class="form-control">
+                            <label>Start time of trip.</label>
+                            <input type="datetime-local" ng-model="formData.startTime" class="form-control" id="startTime">
+
+                            <button type="submit" class="btn btn-success btn-sm" id="submitButton">
+                                <span class="glyphicon glyphicon-flash"></span> Submit!
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3 ng-hide="fare == null" id="fare">Total Cost: ${{fare}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        var app = angular.module('taxiApp', []);
+        app.controller('formController', function ($scope, $http) {
+            $scope.processForm = function () {
+                console.log($scope.formData);
+                $http.post('Home/CalculateFare', $scope.formData).then(function (response) {
+                    $scope.fare = response.data;
+                }, function (reason) {
+                    $scope.fare = null;
+                });
+            }
+        });
+
+    </script>
+
+</body>
+</html>
